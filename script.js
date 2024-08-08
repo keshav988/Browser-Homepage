@@ -1,6 +1,6 @@
 const greeting = document.querySelector('#greeting');
 const weather = document.querySelector('#weather');
-
+const quote = document.querySelector('#quote');
 
 
 // showGreeting function
@@ -59,3 +59,24 @@ getWeather();
 
 setInterval(getWeather, 60000); // every minutes
 
+
+async function getQuote(){
+    const QUOTE_URL = "https://api.quotable.io/quotes/random";
+
+    try {
+        let response = await fetch(QUOTE_URL);
+        if(!response.ok){
+            throw new Error('Quote response was not ok ' + response.statusText);
+        }
+
+        let data = await response.json();
+        console.log(data);
+        quote.innerHTML = `"${data[0].content}"`;
+
+    } catch (error) {
+        console.error('There was a problem with the fetch operation: ', error);
+    }
+}
+
+getQuote();
+setInterval(getQuote, 60000); // every hour
