@@ -9,22 +9,22 @@ function showGreeting() {
     let hours = date.getHours();
 
     if (hours >= 5 && hours < 8) {
-        greeting.innerHTML = "Rise and shine! JAYANTA";
+        greeting.innerHTML = "Rise and shine! Keshav";
     }
     else if (hours >= 8 && hours < 12) {
-        greeting.innerHTML = "Good morning, JAYANTA";
+        greeting.innerHTML = "Good morning, Keshav";
     }
     else if (hours >= 12 && hours < 17) {
-        greeting.innerHTML = "Good afternoon, JAYANTA";
+        greeting.innerHTML = "Good afternoon, Keshav";
     }
     else if (hours >= 17 && hours < 20) {
-        greeting.innerHTML = "Good evening, JAYANTA";
+        greeting.innerHTML = "Good evening, Keshav";
     }
     else if (hours >= 20 && hours < 24) {
-        greeting.innerHTML = "Good night, JAYANTA";
+        greeting.innerHTML = "Good night, Keshav";
     }
     else {
-        greeting.innerHTML = "What's up? JAYANTA";
+        greeting.innerHTML = "What's up? Keshav";
     }
 
 }
